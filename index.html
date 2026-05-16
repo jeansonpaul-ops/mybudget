@@ -590,25 +590,37 @@ tr:hover td{background:#fafbff;}
 
       <!-- ════ PARAMÈTRES ════ -->
       <div id="sec-settings" class="sec">
-        <div class="shdr"><h2>⚙️ Paramètres</h2><p>Synchronisation et profils</p></div>
+        <div class="shdr"><h2>⚙️ Paramètres</h2><p>Préférences de l'application</p></div>
+
+        <!-- Statut synchronisation -->
         <div class="cfg-card">
-          <div class="cfg-title">🔥 Synchronisation Firebase</div>
-          <div class="cfg-status err" id="cfg-bar"><div class="sdot err" id="cfg-dot"></div><span id="cfg-txt">Non configuré — données locales</span></div>
-          <div class="field"><label>API Key</label><input id="cfg-ak" placeholder="AIzaSy..."></div>
-          <div class="frow"><div class="field"><label>Project ID</label><input id="cfg-pid" placeholder="mon-budget-xxxx"></div><div class="field"><label>App ID</label><input id="cfg-aid" placeholder="1:xxx:web:xxx"></div></div>
-          <div style="display:flex;gap:.5rem;margin-top:.5rem">
-            <button class="btn btn-p" onclick="saveCfg()">Enregistrer & connecter</button>
-            <button class="btn btn-g btn-sm" onclick="resetFb()">Déconnecter</button>
+          <div class="cfg-title">🔥 Synchronisation</div>
+          <div class="cfg-status ok" id="cfg-bar">
+            <div class="sdot ok" id="cfg-dot"></div>
+            <span id="cfg-txt">Connexion en cours…</span>
           </div>
-          <p style="font-size:.72rem;color:var(--muted);margin-top:.9rem;line-height:1.6;font-weight:600">📌 console.firebase.google.com → votre projet → ⚙️ Paramètres → Votre application web</p>
+          <p style="font-size:.78rem;color:var(--muted);font-weight:600;margin-top:.5rem">
+            La synchronisation est intégrée — vos données sont partagées en temps réel entre vous deux.
+          </p>
+          <!-- inputs cachés requis par le JS -->
+          <input type="hidden" id="cfg-ak">
+          <input type="hidden" id="cfg-pid">
+          <input type="hidden" id="cfg-aid">
         </div>
+
+        <!-- Prénoms -->
         <div class="cfg-card">
-          <div class="cfg-title">👥 Prénoms</div>
+          <div class="cfg-title">👥 Nos prénoms</div>
+          <p style="font-size:.78rem;color:var(--muted);font-weight:600;margin-bottom:1rem">
+            Personnalisez l'app avec vos prénoms — ils s'affichent sur les transactions et dans la navigation.
+          </p>
           <div class="frow">
-            <div class="field"><label>Prénom 1</label><input id="cfg-n1" value="Paul"></div>
-            <div class="field"><label>Prénom 2</label><input id="cfg-n2" value="Marie"></div>
+            <div class="field"><label>Prénom 1</label><input id="cfg-n1" placeholder="Paul"></div>
+            <div class="field"><label>Prénom 2</label><input id="cfg-n2" placeholder="Marie"></div>
           </div>
-          <button class="btn btn-p btn-sm" style="margin-top:.25rem" onclick="saveNames()">Mettre à jour</button>
+          <button class="btn btn-p btn-sm" style="margin-top:.5rem" onclick="saveNames()">
+            💾 Enregistrer
+          </button>
         </div>
       </div>
 
@@ -629,6 +641,14 @@ tr:hover td{background:#fafbff;}
 <div id="toast"></div>
 
 <script type="module">
+// ════ FIREBASE CONFIG (pré-configuré) ════
+const FIREBASE_CONFIG = {
+  apiKey:    "AIzaSyC3O5Oc_MpUInkEwJNpSyYru5Y-5yGL7Rs",
+  projectId: "my-budget-7fc40",
+  appId:     "1:208671650313:web:2aa9b8b76e3a65d019fed8",
+};
+const DEFAULT_NAMES = { name1: "Paul", name2: "Marie" };
+
 // ════ STATE ════
 let DB,fb,colTx,colRec,colCats,colBills,uTx,uRec,uCats,uBills;
 const S={
@@ -681,8 +701,18 @@ function dCh(k){if(S.charts[k]){S.charts[k].destroy();delete S.charts[k];}}
 const CHARTCOLS=['#7c5cfc','#0fbe7c','#f59e0b','#f5415c','#3b82f6','#ec4899','#14b8a6','#f97316','#65a30d'];
 
 // ════ CONFIG ════
-function loadCfg(){try{return JSON.parse(localStorage.getItem('mybudget_cfg')||'null');}catch{return null;}}
-function storeCfg(c){localStorage.setItem('mybudget_cfg',JSON.stringify(c));}
+function loadCfg(){
+  // Names stored locally, Firebase config always hardcoded
+  try {
+    const stored = JSON.parse(localStorage.getItem('mybudget_cfg')||'null');
+    return { ...FIREBASE_CONFIG, ...DEFAULT_NAMES, ...(stored||{}) };
+  } catch { return { ...FIREBASE_CONFIG, ...DEFAULT_NAMES }; }
+}
+function storeCfg(c){
+  // Only persist user preferences (names), not Firebase keys
+  const toStore = { name1: c.name1, name2: c.name2 };
+  localStorage.setItem('mybudget_cfg', JSON.stringify(toStore));
+}
 async function saveCfg(){
   const ak=q('cfg-ak').value.trim(),pid=q('cfg-pid').value.trim(),aid=q('cfg-aid').value.trim();
   if(!ak||!pid||!aid){toast('⚠️ Remplissez les 3 champs Firebase');return;}
@@ -710,8 +740,7 @@ async function boot(cfg){
   const nextW=new Date();nextW.setDate(nextW.getDate()+7);
   q('bl-d').value=nextW.toISOString().split('T')[0];
   renderCatSel();renderAll();
-  if(S.cfg.apiKey&&S.cfg.projectId&&S.cfg.appId)await connectFb(S.cfg);
-  else{setFbSt(false,'Non configuré — données locales (⚙️ Paramètres)');toast('ℹ️ Configurez Firebase dans ⚙️ Paramètres');}
+  await connectFb(S.cfg);
 }
 
 async function connectFb(cfg){
