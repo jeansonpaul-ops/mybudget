@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>my budget</title>
+<title>my budget — Paul & Jo</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
@@ -561,6 +561,121 @@ tr:hover td{background:rgba(255,255,255,.02);}
               <tbody id="fc-tbody"></tbody>
             </table></div>
           </div>
+
+          <!-- Projet maison -->
+          <div class="card">
+            <div class="card-hd">
+              <div><div class="card-title">🏡 Projet maison — 1 053 000 €</div><div class="card-sub">Statut : 29.04.2026 · Split 35% Paul / 65% Jo</div></div>
+            </div>
+
+            <!-- Fonds propres -->
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:.85rem;margin-bottom:1.1rem">
+              <div style="background:var(--s2);border:1px solid var(--brd);border-radius:14px;padding:1rem 1.1rem">
+                <div style="font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--text3);margin-bottom:.4rem">Paul — Fonds propres</div>
+                <div style="font-family:var(--mono);font-size:1.2rem;font-weight:700;color:#6EE7B7">53 115 €</div>
+                <div style="font-size:.7rem;color:var(--text3);margin-top:.25rem">Après apport 10% + frais</div>
+              </div>
+              <div style="background:var(--s2);border:1px solid var(--brd);border-radius:14px;padding:1rem 1.1rem">
+                <div style="font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--text3);margin-bottom:.4rem">Jo — Fonds propres</div>
+                <div style="font-family:var(--mono);font-size:1.2rem;font-weight:700;color:#6EE7B7">115 785 €</div>
+                <div style="font-size:.7rem;color:var(--text3);margin-top:.25rem">Après apport 10% + frais</div>
+              </div>
+            </div>
+
+            <!-- Mensualité estimée -->
+            <div style="background:linear-gradient(135deg,rgba(110,231,183,.08),rgba(59,130,246,.06));border:1px solid rgba(110,231,183,.2);border-radius:14px;padding:1rem 1.2rem;margin-bottom:1.1rem;display:flex;align-items:center;gap:1rem">
+              <div style="font-size:1.8rem">💳</div>
+              <div style="flex:1">
+                <div style="font-size:.72rem;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:.07em">Mensualité estimée crédit</div>
+                <div style="font-family:var(--mono);font-size:1.5rem;font-weight:700;color:#6EE7B7;margin:.2rem 0">~5 050 – 5 200 €</div>
+                <div style="font-size:.72rem;color:var(--text3)">Split : Paul 1 768 € · Jo 3 282 €</div>
+              </div>
+              <div style="text-align:right">
+                <div style="font-size:.7rem;color:var(--text3)">Reste à vivre</div>
+                <div style="font-family:var(--mono);font-size:1rem;font-weight:700;color:#6EE7B7">635 € Paul</div>
+                <div style="font-family:var(--mono);font-size:1rem;font-weight:700;color:#6EE7B7">662 € Jo</div>
+              </div>
+            </div>
+
+            <!-- Offres bancaires -->
+            <div style="font-size:.75rem;font-weight:800;color:var(--text3);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.65rem">Offres bancaires comparées</div>
+            <div style="overflow-x:auto">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Banque</th>
+                    <th>Durée</th>
+                    <th>Taux 2 ans</th>
+                    <th>Taux 3 ans</th>
+                    <th>Taux 5 ans</th>
+                    <th>Taux 10 ans</th>
+                    <th>Taux variable</th>
+                    <th>Frais dossier</th>
+                    <th>Assurance</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="tag tag-g" style="font-size:.75rem;font-weight:800">⭐ BGL</span></td>
+                    <td class="mono">25 ans</td>
+                    <td class="mono gv">3.52%</td>
+                    <td class="mono gv">3.53%</td>
+                    <td class="mono">3.65%</td>
+                    <td class="mono">4.14%</td>
+                    <td class="mono">3.30%</td>
+                    <td class="mono">1 000 €</td>
+                    <td class="mono" style="color:var(--text3)">—</td>
+                  </tr>
+                  <tr>
+                    <td><span style="font-size:.82rem;font-weight:700">BIL</span></td>
+                    <td class="mono">28 ans</td>
+                    <td class="mono">3.64%</td>
+                    <td class="mono">3.67%</td>
+                    <td class="mono">3.75%</td>
+                    <td class="mono">3.97%</td>
+                    <td class="mono">2.99%</td>
+                    <td class="mono">1 750 €</td>
+                    <td class="mono">12 000 €</td>
+                  </tr>
+                  <tr>
+                    <td><span style="font-size:.82rem;font-weight:700">Raiffeisen</span></td>
+                    <td class="mono">23 ans</td>
+                    <td class="mono">3.58%</td>
+                    <td class="mono">3.66%</td>
+                    <td class="mono">3.88%</td>
+                    <td class="mono">3.99%</td>
+                    <td class="mono">4.08%</td>
+                    <td class="mono">1 500 €</td>
+                    <td class="mono">13 650 €</td>
+                  </tr>
+                  <tr>
+                    <td><span style="font-size:.82rem;font-weight:700">BHW</span></td>
+                    <td class="mono">30 ans</td>
+                    <td class="mono" style="color:var(--text3)">—</td>
+                    <td class="mono" style="color:var(--text3)">—</td>
+                    <td class="mono" style="color:var(--text3)">—</td>
+                    <td class="mono" style="color:var(--text3)">—</td>
+                    <td class="mono">4.37%</td>
+                    <td class="mono">360 €</td>
+                    <td class="mono" style="color:var(--text3)">—</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Stratégie recommandée -->
+            <div style="background:rgba(59,130,246,.07);border:1px solid rgba(59,130,246,.18);border-radius:12px;padding:.9rem 1.1rem;margin-top:1rem">
+              <div style="font-size:.76rem;font-weight:800;color:#3B82F6;margin-bottom:.4rem">💡 Stratégie "minimum d'intérêts" — BGL recommandée</div>
+              <div style="font-size:.78rem;color:var(--text3);line-height:1.6">
+                Split optimal : <strong style="color:var(--text)">30% taux 3 ans</strong> (315 900 €) +
+                <strong style="color:var(--text)">25% taux 5 ans</strong> (263 250 €) +
+                <strong style="color:var(--text)">15% taux 10 ans</strong> (157 950 €) +
+                <strong style="color:var(--text)">30% taux 25 ans</strong> (315 900 €)
+                → Mensualité ~5 000 – 5 150 € · Meilleur équilibre intérêts/risque
+              </div>
+            </div>
+          </div>
+
         </div>
 
         <!-- ═══ TRANSACTIONS ═══════════════════════ -->
@@ -676,7 +791,7 @@ tr:hover td{background:rgba(255,255,255,.02);}
             <div class="card-hd"><div class="card-title">👥 Prénoms</div></div>
             <div class="frow">
               <div class="fl"><label>Prénom 1</label><input id="cfg-n1" placeholder="Paul"></div>
-              <div class="fl"><label>Prénom 2</label><input id="cfg-n2" placeholder="Marie"></div>
+              <div class="fl"><label>Prénom 2</label><input id="cfg-n2" placeholder="Jo"></div>
             </div>
             <button class="btn btn-main btn-sm" onclick="saveNames()">💾 Enregistrer</button>
           </div>
@@ -803,7 +918,7 @@ window.toast = toast;
 // ═══════════════════════════════════════════════════
 // FIREBASE CONNECT
 // ═══════════════════════════════════════════════════
-function loadPrefs(){ try{ const s=JSON.parse(localStorage.getItem("mb_p")||"null"); return{...FB, name1:"Paul", name2:"Marie",...(s||{})}; }catch{ return{...FB, name1:"Paul", name2:"Marie"}; } }
+function loadPrefs(){ try{ const s=JSON.parse(localStorage.getItem("mb_p")||"null"); return{...FB, name1:"Paul", name2:"Jo",...(s||{})}; }catch{ return{...FB, name1:"Paul", name2:"Jo"}; } }
 function storePrefs(c){ localStorage.setItem("mb_p", JSON.stringify({name1:c.name1,name2:c.name2})); }
 
 function setFbSt(ok, msg){
@@ -1298,7 +1413,81 @@ async function boot(){
   renderCatSel();renderAll();
   await connectFb(cfg);
 }
+
+// ═══════════════════════════════════════════════════
+// PRE-LOADED DATA — Financial_projection_maison.ods
+// ═══════════════════════════════════════════════════
+async function preloadData() {
+  if (!cTx || !cRec || !cCats) { setTimeout(preloadData, 800); return; }
+
+  // Check if already seeded
+  const existing = S.rec.length + S.cats.length;
+  if (existing > 0) return; // Firebase already has data
+
+  const today = new Date().toISOString().split("T")[0];
+  const y = new Date().getFullYear();
+  const m = String(new Date().getMonth()+1).padStart(2,"0");
+
+  // ── CATÉGORIES ──────────────────────────────────
+  const catsToAdd = [
+    {id:"credit_hab",    name:"Crédit habitation",  emoji:"🏠", budget:5200},
+    {id:"assurance_hab", name:"Assurance habitation",emoji:"🛡️",budget:200},
+    {id:"taxes",         name:"Taxes communales",   emoji:"🏛️",budget:110},
+    {id:"energie",       name:"Énergie / Gaz / Élec",emoji:"⚡",budget:350},
+    {id:"copro",         name:"Charges Co-Pro",     emoji:"🏢", budget:200},
+    {id:"internet",      name:"Internet / TV",      emoji:"📡", budget:40},
+    {id:"streaming",     name:"Streaming",          emoji:"🎬", budget:55},
+    {id:"leasing",       name:"Leasing / Assurances auto",emoji:"🚗",budget:853},
+    {id:"creche",        name:"Crèche",             emoji:"👶", budget:900},
+    {id:"nourriture",    name:"Nourriture",         emoji:"🛒", budget:600},
+    {id:"menage",        name:"Femme de ménage",    emoji:"🧹", budget:500},
+    {id:"epargne",       name:"Épargne",            emoji:"💰", budget:100},
+    {id:"divers",        name:"Divers",             emoji:"📦", budget:200},
+  ];
+  for (const c of catsToAdd) {
+    await fsAdd(cCats, c);
+  }
+
+  // ── REVENUS FIXES ────────────────────────────────
+  await fsAdd(cRec, {desc:"Salaire Paul",  amount:3600, who:"p1", type:"income", createdAt:new Date().toISOString()});
+  await fsAdd(cRec, {desc:"Salaire Jo",    amount:7200, who:"p2", type:"income", createdAt:new Date().toISOString()});
+
+  // ── CHARGES FIXES ────────────────────────────────
+  const charges = [
+    {desc:"Crédit habitation + frais bancaires", amount:5200, catId:"credit_hab"},
+    {desc:"Assurance habitation",                amount:200,  catId:"assurance_hab"},
+    {desc:"Taxes communales",                    amount:110,  catId:"taxes"},
+    {desc:"Gaz (eau chaude et chauffage)",       amount:200,  catId:"energie"},
+    {desc:"Leo (électricité)",                   amount:150,  catId:"energie"},
+    {desc:"Charges Co-Pro",                      amount:200,  catId:"copro"},
+    {desc:"Internet / Eltrona",                  amount:40,   catId:"internet"},
+    {desc:"Netflix",                             amount:17,   catId:"streaming"},
+    {desc:"Disney+",                             amount:16,   catId:"streaming"},
+    {desc:"Spotify",                             amount:22,   catId:"streaming"},
+    {desc:"Leasing Skoda (service inclus)",      amount:550,  catId:"leasing"},
+    {desc:"Assurance Skoda",                     amount:165,  catId:"leasing"},
+    {desc:"Assurance T-Roc",                     amount:138.3,catId:"leasing"},
+    {desc:"Crèche",                              amount:900,  catId:"creche"},
+    {desc:"Portable Paul",                       amount:60,   catId:"divers"},
+    {desc:"Frais bancaires Paul (BGL)",          amount:4.5,  catId:"divers"},
+    {desc:"Assurance retraite Paul (Foyer)",     amount:50,   catId:"epargne"},
+    {desc:"Épargne Paul",                        amount:50,   catId:"epargne"},
+    {desc:"Nourriture",                          amount:600,  catId:"nourriture"},
+    {desc:"Femme de ménage",                     amount:500,  catId:"menage"},
+    {desc:"Portable Jo",                         amount:50,   catId:"divers"},
+    {desc:"Frais bancaires Jo (BGL BNP)",        amount:100,  catId:"divers"},
+    {desc:"Assurance retraite Jo (DEVK)",        amount:75,   catId:"epargne"},
+  ];
+  for (const c of charges) {
+    await fsAdd(cRec, {...c, type:"expense", createdAt:new Date().toISOString()});
+  }
+
+  toast("✅ Données financières chargées !");
+}
+
 boot();
+setTimeout(preloadData, 1500);
+
 </script>
 </body>
 </html>
