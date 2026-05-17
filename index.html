@@ -127,7 +127,7 @@ body{font-family:var(--f-body);background:var(--bg);color:var(--tx);font-size:14
 }
 .sb-bal::after{content:'';position:absolute;right:-20px;top:-20px;width:80px;height:80px;background:rgba(255,255,255,.06);border-radius:50%;}
 .sb-bl{font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;opacity:.7;margin-bottom:.25rem;}
-.sb-bv{font-family:var(--f-mono);font-size:1.55rem;font-weight:600;line-height:1;}
+.sb-bv{font-family:var(--f-mono);font-size:1.75rem;font-weight:700;line-height:1;letter-spacing:-.02em;}
 .sb-bs{font-size:.68rem;opacity:.65;margin-top:.25rem;}
 
 /* Nav */
@@ -217,7 +217,7 @@ body{font-family:var(--f-body);background:var(--bg);color:var(--tx);font-size:14
 }
 .kpi:hover{transform:translateY(-2px);box-shadow:var(--sh2);}
 .kl{font-family:var(--f-body);font-size:.66rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--tx3);margin-bottom:.5rem;}
-.kv{font-family:var(--f-mono);font-size:1.3rem;font-weight:600;line-height:1;margin-bottom:.25rem;}
+.kv{font-family:var(--f-mono);font-size:1.5rem;font-weight:700;line-height:1;margin-bottom:.25rem;letter-spacing:-.02em;}
 .kv.gv{color:var(--grn);}
 .kv.rv{color:var(--red);}
 .kv.iv{color:var(--ind);}
@@ -241,7 +241,7 @@ body{font-family:var(--f-body);background:var(--bg);color:var(--tx);font-size:14
   background:radial-gradient(circle,rgba(79,70,229,.05) 0%,transparent 70%);
 }
 .hl{font-family:var(--f-body);font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.09em;color:var(--tx3);margin-bottom:.5rem;}
-.hv{font-family:var(--f-mono);font-size:2.6rem;font-weight:600;line-height:1;margin-bottom:.35rem;}
+.hv{font-family:var(--f-mono);font-size:3rem;font-weight:700;line-height:1;margin-bottom:.35rem;letter-spacing:-.03em;}
 .hv.pos{color:var(--grn);}
 .hv.neg{color:var(--red);}
 .hm{font-size:.8rem;color:var(--tx3);}
@@ -273,7 +273,7 @@ td{
 }
 tr:last-child td{border-bottom:none;}
 tr:hover td{background:#FAFBFF;}
-.mono{font-family:var(--f-mono);font-size:.76rem;font-weight:500;}
+.mono{font-family:var(--f-mono);font-size:.82rem;font-weight:600;}
 .gv{color:var(--grn);}
 .rv{color:var(--red);}
 
@@ -289,6 +289,26 @@ tr:hover td{background:#FAFBFF;}
 .tp1{background:var(--ind-l);color:var(--ind);}
 .tp2{background:var(--pin-l);color:var(--pin);}
 .tco{background:var(--grn-l);color:var(--grn);}
+/* ── PERSON DOTS ──────────────────────────────────── */
+.pdot{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:22px;height:22px;border-radius:50%;
+  font-family:var(--f-head);font-size:.62rem;font-weight:800;
+  color:#fff;flex-shrink:0;vertical-align:middle;
+  box-shadow:0 1px 4px rgba(0,0,0,.15);
+}
+.pdot-p1 {background:linear-gradient(135deg,#4F46E5,#7C3AED);}
+.pdot-p2 {background:linear-gradient(135deg,#DB2777,#D97706);}
+.pdot-co {background:linear-gradient(135deg,#059669,#0D9488);}
+.pdot-split{
+  display:inline-flex;align-items:center;
+  background:var(--s1);border:1.5px solid var(--brd);
+  border-radius:20px;padding:0 .5rem 0 .25rem;
+  gap:.2rem;height:22px;vertical-align:middle;
+}
+.pdot-split .pdot{width:17px;height:17px;font-size:.54rem;box-shadow:none;}
+.pdot-pct{font-size:.62rem;font-weight:700;color:var(--tx2);font-family:var(--f-mono);}
+
 
 /* ── ITEM ROWS ───────────────────────────────────── */
 .row{
@@ -307,7 +327,7 @@ tr:hover td{background:#FAFBFF;}
 .rbody{flex:1;min-width:0;}
 .rn{font-family:var(--f-body);font-size:.85rem;font-weight:600;color:var(--tx);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 .rm{font-family:var(--f-body);font-size:.68rem;color:var(--tx4);margin-top:.03rem;}
-.ramt{font-family:var(--f-mono);font-size:.85rem;font-weight:600;flex-shrink:0;}
+.ramt{font-family:var(--f-mono);font-size:.95rem;font-weight:700;flex-shrink:0;letter-spacing:-.01em;}
 .rdel{background:none;border:none;color:var(--tx4);cursor:pointer;padding:.22rem;border-radius:6px;font-size:.8rem;transition:all .12s;flex-shrink:0;}
 .rdel:hover{color:var(--red);background:var(--red-l);}
 
@@ -315,9 +335,9 @@ tr:hover td{background:#FAFBFF;}
 .prog{margin-bottom:.85rem;}
 .prh{display:flex;justify-content:space-between;align-items:center;margin-bottom:.35rem;}
 .prn{font-family:var(--f-body);font-size:.84rem;font-weight:500;color:var(--tx);}
-.pra{font-family:var(--f-mono);font-size:.7rem;color:var(--tx3);}
-.prt{height:8px;background:var(--s1);border-radius:4px;overflow:hidden;border:1px solid var(--brd);}
-.prf{height:100%;border-radius:4px;transition:width .6s cubic-bezier(.4,0,.2,1);}
+.pra{font-family:var(--f-mono);font-size:.78rem;font-weight:600;color:var(--tx2);}
+.prt{height:12px;background:var(--s1);border-radius:6px;overflow:hidden;border:1px solid var(--brd);}
+.prf{height:100%;border-radius:6px;transition:width .6s cubic-bezier(.4,0,.2,1);}
 
 /* ── TYPE TOGGLE ─────────────────────────────────── */
 .tt-w{display:flex;background:var(--s1);border-radius:9px;padding:3px;gap:3px;margin-bottom:.85rem;}
@@ -378,7 +398,7 @@ tr:hover td{background:#FAFBFF;}
 .remb-hero{border-radius:var(--r2);padding:1.4rem;text-align:center;border:1.5px solid var(--brd);background:var(--white);box-shadow:var(--sh1);}
 .remb-hero.owes{background:linear-gradient(135deg,var(--red-l),#fff5f5);border-color:rgba(220,38,38,.2);}
 .remb-hero.owed{background:linear-gradient(135deg,var(--grn-l),#f0fdf8);border-color:rgba(5,150,105,.2);}
-.remb-v{font-family:var(--f-mono);font-size:2rem;font-weight:600;margin:.4rem 0;}
+.remb-v{font-family:var(--f-mono);font-size:2.2rem;font-weight:700;margin:.4rem 0;letter-spacing:-.02em;}
 .remb-l{font-family:var(--f-body);font-size:.75rem;color:var(--tx3);}
 
 /* ── BILL ROWS ───────────────────────────────────── */
@@ -399,7 +419,7 @@ tr:hover td{background:#FAFBFF;}
 .info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;margin-bottom:1rem;}
 .info-box{background:var(--s1);border:1px solid var(--brd);border-radius:var(--r);padding:.9rem 1rem;}
 .info-lbl{font-family:var(--f-body);font-size:.64rem;font-weight:600;text-transform:uppercase;letter-spacing:.07em;color:var(--tx3);margin-bottom:.3rem;}
-.info-val{font-family:var(--f-mono);font-size:1.1rem;font-weight:600;color:var(--tx);}
+.info-val{font-family:var(--f-mono);font-size:1.25rem;font-weight:700;color:var(--tx);letter-spacing:-.015em;}
 .info-sub{font-size:.68rem;color:var(--tx4);margin-top:.18rem;}
 .strat{background:var(--s1);border:1.5px solid var(--brd);border-radius:var(--r);padding:.9rem 1.1rem;margin-bottom:.5rem;}
 .strat.best{border-color:rgba(5,150,105,.3);background:var(--grn-l);}
@@ -570,12 +590,12 @@ tr:hover td{background:#FAFBFF;}
           <div class="chd"><div><div class="ct">🏡 Projet maison — 1 053 000 €</div><div class="cs">Statut 29.04.2026 · Prix achat 1 170 000 € · Split 35% Paul / 65% Jo</div></div></div>
           <div class="info-grid">
             <div class="info-box">
-              <div class="info-lbl">Paul verse / mois</div>
+              <div class="info-lbl" style="display:flex;align-items:center;gap:.4rem"><span class="pdot pdot-p1" style="width:16px;height:16px;font-size:.52rem">P</span> Paul verse / mois</div>
               <div class="info-val" style="color:var(--ind)">2 800 €</div>
               <div class="info-sub">Reste perso : 635 €</div>
             </div>
             <div class="info-box">
-              <div class="info-lbl">Jo verse / mois</div>
+              <div class="info-lbl" style="display:flex;align-items:center;gap:.4rem"><span class="pdot pdot-p2" style="width:16px;height:16px;font-size:.52rem">J</span> Jo verse / mois</div>
               <div class="info-val" style="color:var(--ind)">5 213 €</div>
               <div class="info-sub">Reste perso : 662 €</div>
             </div>
@@ -585,12 +605,12 @@ tr:hover td{background:#FAFBFF;}
               <div class="info-sub">Paul 1 820 € · Jo 3 380 €</div>
             </div>
             <div class="info-box">
-              <div class="info-lbl">Fonds propres Paul</div>
+              <div class="info-lbl" style="display:flex;align-items:center;gap:.4rem"><span class="pdot pdot-p1" style="width:16px;height:16px;font-size:.52rem">P</span> Fonds propres Paul</div>
               <div class="info-val" style="color:var(--grn)">53 115 €</div>
               <div class="info-sub">Après apport + frais</div>
             </div>
             <div class="info-box">
-              <div class="info-lbl">Fonds propres Jo</div>
+              <div class="info-lbl" style="display:flex;align-items:center;gap:.4rem"><span class="pdot pdot-p2" style="width:16px;height:16px;font-size:.52rem">J</span> Fonds propres Jo</div>
               <div class="info-val" style="color:var(--grn)">115 785 €</div>
               <div class="info-sub">Après apport + frais</div>
             </div>
@@ -868,27 +888,52 @@ const S = {
   ttType:"dep", who:"all", charts:{}
 };
 
+// Catégories groupées par proximité thématique
+// Groupe 1 — Logement
+// Groupe 2 — Transport
+// Groupe 3 — Famille / Enfants
+// Groupe 4 — Alimentation / Maison
+// Groupe 5 — Abonnements / Loisirs
+// Groupe 6 — Épargne / Finances
+// Groupe 7 — Divers
 const CATS0 = [
-  {id:"credit_hab",    name:"Crédit habitation",      emoji:"🏠",budget:5200},
-  {id:"assurance_hab", name:"Assurance habitation",   emoji:"🛡️",budget:200},
-  {id:"taxes",         name:"Taxes communales",       emoji:"🏛️",budget:110},
-  {id:"gaz",           name:"Gaz / Chauffage",        emoji:"🔥",budget:200},
-  {id:"electricite",   name:"Électricité",            emoji:"⚡",budget:150},
-  {id:"copro",         name:"Charges Co-Pro",         emoji:"🏢",budget:200},
-  {id:"internet",      name:"Internet / TV",          emoji:"📡",budget:40},
-  {id:"streaming",     name:"Streaming",              emoji:"🎬",budget:55},
-  {id:"leasing",       name:"Leasing Skoda",          emoji:"🚗",budget:550},
-  {id:"assurance_auto",name:"Assurances auto",        emoji:"🛡️",budget:303},
-  {id:"creche",        name:"Crèche",                 emoji:"👶",budget:900},
-  {id:"foyer_sco",     name:"Foyer scolaire",         emoji:"🏫",budget:0},
-  {id:"nourriture",    name:"Nourriture",             emoji:"🛒",budget:600},
-  {id:"menage",        name:"Femme de ménage",        emoji:"🧹",budget:500},
-  {id:"telephone",     name:"Téléphones",             emoji:"📱",budget:110},
-  {id:"banque",        name:"Frais bancaires",        emoji:"🏦",budget:105},
-  {id:"retraite",      name:"Assurance retraite",     emoji:"🏅",budget:125},
-  {id:"epargne",       name:"Épargne Paul",           emoji:"💰",budget:50},
-  {id:"divers",        name:"Divers",                 emoji:"📦",budget:100},
+  // ── Logement ──────────────────────────────
+  {id:"credit_hab",    name:"Crédit habitation",   emoji:"🏠", budget:5200, group:"Logement"},
+  {id:"assurance_hab", name:"Assurance hab.",       emoji:"🛡️",budget:200,  group:"Logement"},
+  {id:"copro",         name:"Charges Co-Pro",       emoji:"🏢", budget:200,  group:"Logement"},
+  {id:"taxes",         name:"Taxes communales",     emoji:"🏛️",budget:110,  group:"Logement"},
+  {id:"gaz",           name:"Gaz / Chauffage",      emoji:"🔥", budget:200,  group:"Logement"},
+  {id:"electricite",   name:"Électricité",          emoji:"⚡", budget:150,  group:"Logement"},
+  // ── Transport ─────────────────────────────
+  {id:"leasing",       name:"Leasing Skoda",        emoji:"🚗", budget:550,  group:"Transport"},
+  {id:"assurance_auto",name:"Assurances auto",      emoji:"🛡️",budget:303,  group:"Transport"},
+  // ── Famille / Enfants ─────────────────────
+  {id:"creche",        name:"Crèche",               emoji:"👶", budget:900,  group:"Famille"},
+  {id:"foyer_sco",     name:"Foyer scolaire",       emoji:"🏫", budget:0,    group:"Famille"},
+  // ── Alimentation / Maison ─────────────────
+  {id:"nourriture",    name:"Nourriture",           emoji:"🛒", budget:600,  group:"Alimentation"},
+  {id:"menage",        name:"Femme de ménage",      emoji:"🧹", budget:500,  group:"Alimentation"},
+  // ── Abonnements / Loisirs ─────────────────
+  {id:"internet",      name:"Internet / TV",        emoji:"📡", budget:40,   group:"Abonnements"},
+  {id:"streaming",     name:"Streaming",            emoji:"🎬", budget:55,   group:"Abonnements"},
+  // ── Épargne / Finances ────────────────────
+  {id:"epargne",       name:"Épargne Paul",         emoji:"💰", budget:50,   group:"Épargne"},
+  {id:"retraite",      name:"Assurance retraite",   emoji:"🏅", budget:125,  group:"Épargne"},
+  {id:"banque",        name:"Frais bancaires",      emoji:"🏦", budget:105,  group:"Épargne"},
+  {id:"telephone",     name:"Téléphones",           emoji:"📱", budget:110,  group:"Épargne"},
+  // ── Divers ────────────────────────────────
+  {id:"divers",        name:"Divers",               emoji:"📦", budget:100,  group:"Divers"},
 ];
+
+// Helper — sort cats by group order
+const GROUP_ORDER = ["Logement","Transport","Famille","Alimentation","Abonnements","Épargne","Divers"];
+function sortedCats(cats) {
+  return [...cats].sort((a,b) => {
+    const ga = GROUP_ORDER.indexOf(a.group||"Divers");
+    const gb = GROUP_ORDER.indexOf(b.group||"Divers");
+    return ga !== gb ? ga - gb : (a.name||"").localeCompare(b.name||"");
+  });
+}
 
 // ═══════════════════════════════════════════════════
 // PRELOAD DATA
@@ -902,47 +947,47 @@ async function preloadData() {
   for (const c of CATS0) await fsAdd(cCats, c);
 
   const fixes = [
-    // Revenus
-    {desc:"Salaire Paul", amount:3600, who:"p1", type:"income"},
-    {desc:"Salaire Jo",   amount:7200, who:"p2", type:"income"},
-    // Charges communes split 35/65 crédit
-    {desc:"Crédit habitation (Paul 35%)",  amount:1820,  who:"p1", catId:"credit_hab",    type:"expense"},
-    {desc:"Crédit habitation (Jo 65%)",    amount:3380,  who:"p2", catId:"credit_hab",    type:"expense"},
-    // 50/50
-    {desc:"Assurance habitation (Paul)",   amount:100,   who:"p1", catId:"assurance_hab", type:"expense"},
-    {desc:"Assurance habitation (Jo)",     amount:100,   who:"p2", catId:"assurance_hab", type:"expense"},
-    {desc:"Taxes communales (Paul)",       amount:55,    who:"p1", catId:"taxes",         type:"expense"},
-    {desc:"Taxes communales (Jo)",         amount:55,    who:"p2", catId:"taxes",         type:"expense"},
-    {desc:"Gaz / Chauffage (Paul)",        amount:100,   who:"p1", catId:"gaz",           type:"expense"},
-    {desc:"Gaz / Chauffage (Jo)",          amount:100,   who:"p2", catId:"gaz",           type:"expense"},
-    {desc:"Électricité Leo (Paul)",        amount:75,    who:"p1", catId:"electricite",   type:"expense"},
-    {desc:"Électricité Leo (Jo)",          amount:75,    who:"p2", catId:"electricite",   type:"expense"},
-    {desc:"Charges Co-Pro (Paul)",         amount:100,   who:"p1", catId:"copro",         type:"expense"},
-    {desc:"Charges Co-Pro (Jo)",           amount:100,   who:"p2", catId:"copro",         type:"expense"},
-    {desc:"Internet Eltrona (Paul)",       amount:20,    who:"p1", catId:"internet",      type:"expense"},
-    {desc:"Internet Eltrona (Jo)",         amount:20,    who:"p2", catId:"internet",      type:"expense"},
-    {desc:"Netflix (Paul)",                amount:8.5,   who:"p1", catId:"streaming",     type:"expense"},
-    {desc:"Netflix (Jo)",                  amount:8.5,   who:"p2", catId:"streaming",     type:"expense"},
-    {desc:"Disney+ (Paul)",                amount:8,     who:"p1", catId:"streaming",     type:"expense"},
-    {desc:"Disney+ (Jo)",                  amount:8,     who:"p2", catId:"streaming",     type:"expense"},
-    {desc:"Spotify (Paul)",                amount:11,    who:"p1", catId:"streaming",     type:"expense"},
-    {desc:"Spotify (Jo)",                  amount:11,    who:"p2", catId:"streaming",     type:"expense"},
-    {desc:"Crèche (Paul 50%)",             amount:450,   who:"p1", catId:"creche",        type:"expense"},
-    {desc:"Crèche (Jo 50%)",               amount:450,   who:"p2", catId:"creche",        type:"expense"},
-    // Paul perso
-    {desc:"Portable Paul",                 amount:60,    who:"p1", catId:"telephone",     type:"expense"},
-    {desc:"Frais bancaires Paul (BGL)",    amount:4.5,   who:"p1", catId:"banque",        type:"expense"},
-    {desc:"Assurance retraite Paul",       amount:50,    who:"p1", catId:"retraite",      type:"expense"},
-    {desc:"Épargne Paul",                  amount:50,    who:"p1", catId:"epargne",       type:"expense"},
-    // Jo perso (100% Jo)
-    {desc:"Leasing Skoda",                 amount:550,   who:"p2", catId:"leasing",       type:"expense"},
-    {desc:"Assurance Skoda",               amount:165,   who:"p2", catId:"assurance_auto",type:"expense"},
-    {desc:"Assurance T-Roc",               amount:138.3, who:"p2", catId:"assurance_auto",type:"expense"},
-    {desc:"Nourriture / Courses",          amount:600,   who:"p2", catId:"nourriture",    type:"expense"},
-    {desc:"Femme de ménage",               amount:500,   who:"p2", catId:"menage",        type:"expense"},
-    {desc:"Portable Jo",                   amount:50,    who:"p2", catId:"telephone",     type:"expense"},
-    {desc:"Frais bancaires Jo (BGL BNP)",  amount:100,   who:"p2", catId:"banque",        type:"expense"},
-    {desc:"Assurance retraite Jo (DEVK)",  amount:75,    who:"p2", catId:"retraite",      type:"expense"},
+    // ── Revenus ──────────────────────────────────────────────────────
+    {desc:"Salaire Paul",  amount:3600, who:"p1", type:"income"},
+    {desc:"Salaire Jo",    amount:7200, who:"p2", type:"income"},
+
+    // ── Logement — Crédit habitation split 35% Paul / 65% Jo ─────────
+    {desc:"Crédit habitation", amount:5200, who:"common", catId:"credit_hab",    type:"expense", split:{p1:0.35,p2:0.65}, note:"Paul 1 820€ / Jo 3 380€"},
+    {desc:"Assurance habitation", amount:200, who:"common", catId:"assurance_hab", type:"expense", split:{p1:0.5,p2:0.5},   note:"50/50"},
+    {desc:"Charges Co-Pro",    amount:200, who:"common", catId:"copro",         type:"expense", split:{p1:0.5,p2:0.5},   note:"50/50"},
+    {desc:"Taxes communales",  amount:110, who:"common", catId:"taxes",         type:"expense", split:{p1:0.5,p2:0.5},   note:"50/50"},
+    {desc:"Gaz / Chauffage",   amount:200, who:"common", catId:"gaz",           type:"expense", split:{p1:0.5,p2:0.5},   note:"50/50"},
+    {desc:"Électricité (Leo)", amount:150, who:"common", catId:"electricite",   type:"expense", split:{p1:0.5,p2:0.5},   note:"50/50"},
+
+    // ── Transport — 100% Jo ───────────────────────────────────────────
+    {desc:"Leasing Skoda (service inclus)", amount:550,   who:"p2", catId:"leasing",       type:"expense", note:"100% Jo"},
+    {desc:"Assurance Skoda",               amount:165,   who:"p2", catId:"assurance_auto", type:"expense", note:"100% Jo"},
+    {desc:"Assurance T-Roc",               amount:138.3, who:"p2", catId:"assurance_auto", type:"expense", note:"100% Jo"},
+
+    // ── Famille — 50/50 ───────────────────────────────────────────────
+    {desc:"Crèche",          amount:900, who:"common", catId:"creche",    type:"expense", split:{p1:0.5,p2:0.5}, note:"50/50 — Paul 450€ / Jo 450€"},
+    {desc:"Foyer scolaire",  amount:0,   who:"common", catId:"foyer_sco", type:"expense", split:{p1:0.5,p2:0.5}, note:"50/50"},
+
+    // ── Alimentation — 100% Jo ────────────────────────────────────────
+    {desc:"Nourriture / Courses", amount:600, who:"p2", catId:"nourriture", type:"expense", note:"100% Jo"},
+    {desc:"Femme de ménage",      amount:500, who:"p2", catId:"menage",     type:"expense", note:"100% Jo"},
+
+    // ── Abonnements — 50/50 ───────────────────────────────────────────
+    {desc:"Internet / TV (Eltrona)", amount:40, who:"common", catId:"internet",  type:"expense", split:{p1:0.5,p2:0.5}, note:"50/50"},
+    {desc:"Netflix",  amount:17, who:"common", catId:"streaming", type:"expense", split:{p1:0.5,p2:0.5}, note:"50/50"},
+    {desc:"Disney+",  amount:16, who:"common", catId:"streaming", type:"expense", split:{p1:0.5,p2:0.5}, note:"50/50"},
+    {desc:"Spotify",  amount:22, who:"common", catId:"streaming", type:"expense", split:{p1:0.5,p2:0.5}, note:"50/50"},
+
+    // ── Épargne / Finances — Paul uniquement ─────────────────────────
+    {desc:"Assurance retraite Paul (Foyer)", amount:50,  who:"p1", catId:"retraite",  type:"expense", note:"100% Paul"},
+    {desc:"Épargne Paul",                   amount:50,  who:"p1", catId:"epargne",   type:"expense", note:"100% Paul"},
+    {desc:"Frais bancaires Paul (BGL)",     amount:4.5, who:"p1", catId:"banque",    type:"expense", note:"100% Paul"},
+    {desc:"Portable Paul",                  amount:60,  who:"p1", catId:"telephone", type:"expense", note:"100% Paul"},
+
+    // ── Épargne / Finances — Jo uniquement ───────────────────────────
+    {desc:"Assurance retraite Jo (DEVK)",   amount:75,  who:"p2", catId:"retraite",  type:"expense", note:"100% Jo"},
+    {desc:"Frais bancaires Jo (BGL BNP)",   amount:100, who:"p2", catId:"banque",    type:"expense", note:"100% Jo"},
+    {desc:"Portable Jo",                    amount:50,  who:"p2", catId:"telephone", type:"expense", note:"100% Jo"},
   ];
 
   for (const r of fixes) await fsAdd(cRec, {...r, createdAt: new Date().toISOString()});
@@ -960,6 +1005,26 @@ const fmt  = (n, sign=false) => {
 const getCat = id => S.cats.find(c=>c.id===id) || {name:id,emoji:"📦",budget:0};
 const wLbl   = w  => w==="p1"?(S.cfg.name1||"Paul"):w==="p2"?(S.cfg.name2||"Jo"):"Commun";
 const wTag   = w  => w==="p1"?"tp1":w==="p2"?"tp2":"tco";
+// Returns a colored dot with initial for person display
+function wDot(w, cfg) {
+  const n1 = cfg?.name1 || S.cfg?.name1 || "Paul";
+  const n2 = cfg?.name2 || S.cfg?.name2 || "Jo";
+  if (w === "p1")     return `<span class="pdot pdot-p1" title="${n1}">${n1[0].toUpperCase()}</span>`;
+  if (w === "p2")     return `<span class="pdot pdot-p2" title="${n2}">${n2[0].toUpperCase()}</span>`;
+  return `<span class="pdot pdot-co" title="Commun">C</span>`;
+}
+// Split dot: shows both persons with % split
+function wDotSplit(split, cfg) {
+  const n1 = cfg?.name1 || S.cfg?.name1 || "Paul";
+  const n2 = cfg?.name2 || S.cfg?.name2 || "Jo";
+  const p1pct = Math.round((split?.p1||0.5)*100);
+  const p2pct = Math.round((split?.p2||0.5)*100);
+  return `<span class="pdot-split" title="${n1} ${p1pct}% · ${n2} ${p2pct}%">
+    <span class="pdot pdot-p1">${n1[0].toUpperCase()}</span>
+    <span class="pdot pdot-p2">${n2[0].toUpperCase()}</span>
+    <span class="pdot-pct">${p1pct}/${p2pct}</span>
+  </span>`;
+}
 const mTx    = (d) => {
   const ref=d||S.month,y=ref.getFullYear(),m=ref.getMonth();
   return S.tx.filter(t=>{const td=new Date(t.date);return td.getFullYear()===y&&td.getMonth()===m;});
@@ -999,7 +1064,10 @@ function renderSbBal(){
   const exp=Math.abs(t.filter(x=>x.amount<0).reduce((a,b)=>a+b.amount,0));
   const bv=q("sb-bv"),bs=q("sb-bs");
   if(bv){bv.textContent=fmt(bal,true);}
-  if(bs){bs.textContent="+"+fmt(inc)+" revenus · -"+fmt(exp)+" dépenses";}
+  // Per person income
+  const sbP1Inc=t.filter(x=>x.amount>0&&x.who==="p1").reduce((a,b)=>a+b.amount,0);
+  const sbP2Inc=t.filter(x=>x.amount>0&&x.who==="p2").reduce((a,b)=>a+b.amount,0);
+  if(bs){bs.textContent=inc>0?"+"+fmt(inc)+" · Dép. "+fmt(exp):"Aucune transaction ce mois";}
 }
 
 function renderAlerts(){
@@ -1039,10 +1107,37 @@ function renderKpis(){
   const sav=Math.max(0,mBal());
   const bd=S.bills.filter(b=>{const d=new Date(b.dueDate),t2=new Date();t2.setDate(t2.getDate()+30);return b.status!=="paid"&&d<=t2;}).reduce((a,b)=>a+b.amount,0);
   const cmp=(c,p)=>{if(!p)return"";const d=c-p,pc=Math.round((d/p)*100);return`<div class="kdlt ${d>0?"dd":"du"}">${d>0?"▲":"▼"} ${Math.abs(pc)}%</div>`;};
+  // Per-person amounts
+  const p1Exp=mTx().filter(x=>x.amount<0&&x.who==="p1").reduce((a,b)=>a+Math.abs(b.amount),0);
+  const p2Exp=mTx().filter(x=>x.amount<0&&x.who==="p2").reduce((a,b)=>a+Math.abs(b.amount),0);
+  const coExp=mTx().filter(x=>x.amount<0&&x.who==="common").reduce((a,b)=>a+Math.abs(b.amount),0);
   el.innerHTML=`
-    <div class="kpi"><div class="kl">Dépenses</div><div class="kv rv">${fmt(exp)}</div>${cmp(exp,pExp)}<div class="km">Mois en cours</div></div>
-    <div class="kpi"><div class="kl">Épargne estimée</div><div class="kv gv">${fmt(sav)}</div><div class="km">Solde restant</div></div>
-    <div class="kpi"><div class="kl">Factures à venir</div><div class="kv av">${fmt(bd)}</div><div class="km">30 prochains jours</div></div>`;
+    <div class="kpi">
+      <div class="kl">Dépenses totales</div>
+      <div class="kv rv">${fmt(exp)}</div>
+      ${cmp(exp,pExp)}
+      <div style="display:flex;flex-direction:column;gap:.18rem;margin-top:.45rem">
+        <div style="display:flex;align-items:center;gap:.4rem;font-size:.72rem">
+          ${wDot("p1")} <span style="font-family:var(--f-mono);font-weight:600;color:var(--tx2)">${fmt(p1Exp)}</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:.4rem;font-size:.72rem">
+          ${wDot("p2")} <span style="font-family:var(--f-mono);font-weight:600;color:var(--tx2)">${fmt(p2Exp)}</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:.4rem;font-size:.72rem">
+          ${wDot("common")} <span style="font-family:var(--f-mono);font-weight:600;color:var(--tx2)">${fmt(coExp)}</span>
+        </div>
+      </div>
+    </div>
+    <div class="kpi">
+      <div class="kl">Épargne estimée</div>
+      <div class="kv gv">${fmt(sav)}</div>
+      <div class="km">Solde net ce mois</div>
+    </div>
+    <div class="kpi">
+      <div class="kl">Factures à venir</div>
+      <div class="kv av">${fmt(bd)}</div>
+      <div class="km">30 prochains jours</div>
+    </div>`;
 }
 
 function renderWaterfall(){
@@ -1076,7 +1171,7 @@ function renderDayTl(){
     return`<div style="display:flex;align-items:center;gap:.6rem;padding:.38rem .5rem;border-radius:6px;${isT?"background:var(--ind-l);":""}${r.run<0?"background:var(--red-l);":""}">
       <div style="font-family:var(--f-mono);font-size:.68rem;color:var(--tx3);width:22px;flex-shrink:0">${r.d}</div>
       <div style="flex:1;height:6px;background:var(--s1);border-radius:3px;overflow:hidden"><div style="height:100%;width:${pct}%;background:${col};border-radius:3px;transition:width .4s"></div></div>
-      <div style="font-family:var(--f-mono);font-size:.68rem;font-weight:600;width:72px;text-align:right;color:${col}">${fmt(r.run,true)}</div>
+      <div style="font-family:var(--f-mono);font-size:.74rem;font-weight:700;width:82px;text-align:right;color:${col};letter-spacing:-.01em">${fmt(r.run,true)}</div>
     </div>`;
   }).join("");
 }
@@ -1097,7 +1192,7 @@ function rowTx(t,del){
     <div class="ric ${t.amount<0?"ri-r":"ri-g"}">${c.emoji}</div>
     <div class="rbody">
       <div class="rn">${t.desc}</div>
-      <div class="rm">${t.date} · ${c.name} · <span class="tag ${wTag(t.who)}">${wLbl(t.who)}</span> <span class="tag ${sC}">${sL}</span>${rb}</div>
+      <div class="rm">${t.date} · ${c.name} · ${wDot(t.who)} <span class="tag ${sC}">${sL}</span>${rb}</div>
     </div>
     ${del?`<select style="background:var(--s1);border:1.5px solid var(--brd);border-radius:7px;color:var(--tx);font-family:var(--f-body);font-size:.7rem;font-weight:600;padding:.2rem .4rem;cursor:pointer" onchange="upSt('${t.id}',this.value)"><option value="paye" ${t.status==="paye"?"selected":""}>✅</option><option value="engage" ${t.status==="engage"?"selected":""}>📌</option><option value="prevu" ${t.status==="prevu"?"selected":""}>🔮</option></select>`:""}
     <div class="ramt" style="color:${t.amount>=0?"var(--grn)":"var(--red)"}">${fmt(t.amount,true)}</div>
@@ -1108,12 +1203,68 @@ function rowTx(t,del){
 function renderBudgetBars(){
   const el=q("budget-bars");if(!el)return;
   const tots={};mTx().filter(x=>x.amount<0).forEach(x=>{tots[x.cat]=(tots[x.cat]||0)+Math.abs(x.amount);});
-  el.innerHTML=S.cats.map(c=>{
+  const cats=sortedCats(S.cats);
+  let html="",lastGroup="";
+  cats.forEach(c=>{
+    const grp=c.group||"Divers";
+    // Group header
+    if(grp!==lastGroup){
+      const grpIcons={"Logement":"🏠","Transport":"🚗","Famille":"👨‍👩‍👧","Alimentation":"🍽️","Abonnements":"📺","Épargne":"💰","Divers":"📦"};
+      const grpSpent=cats.filter(x=>x.group===grp).reduce((a,x)=>a+(tots[x.id]||0),0);
+      const grpBudget=cats.filter(x=>x.group===grp).reduce((a,x)=>a+(x.budget||0),0);
+      // Compute who pays in this group
+      const grpCats=cats.filter(x=>(x.group||"Divers")===grp);
+      const grpWhos=[...new Set(
+        S.rec.filter(r=>r.type==="expense"&&grpCats.some(c=>c.id===r.catId))
+          .map(r=>r.split?"split":r.who||"common")
+      )];
+      const grpDots=grpWhos.map(w=>w==="split"?"":wDot(w)).join("");
+      const GRP_ACCENT = {
+        "Logement":"#4F46E5","Transport":"#0891B2","Famille":"#DB2777",
+        "Alimentation":"#059669","Abonnements":"#7C3AED","Épargne":"#2563EB","Divers":"#6B7280"
+      };
+      const grpAccent = GRP_ACCENT[grp]||"#6B7280";
+      const grpPct = grpBudget>0?Math.min(100,Math.round((grpSpent/grpBudget)*100)):0;
+      html+=`<div style="display:flex;align-items:center;justify-content:space-between;margin:${lastGroup?"1.25rem":"0"} 0 .55rem;padding:.5rem .75rem;border-radius:8px;background:${grpAccent}10;border-left:3px solid ${grpAccent}">
+        <div style="display:flex;align-items:center;gap:.5rem">
+          <span style="font-size:.82rem">${grpIcons[grp]||"📦"}</span>
+          <span style="font-family:var(--f-head);font-size:.78rem;font-weight:700;color:var(--tx)">${grp}</span>
+          <span style="display:flex;gap:.18rem">${grpDots}</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:.5rem">
+          <span style="font-family:var(--f-mono);font-size:.72rem;font-weight:700;color:${grpAccent}">${grpPct}%</span>
+          <span style="font-family:var(--f-mono);font-size:.7rem;color:var(--tx3)">${fmt(grpSpent)} / ${fmt(grpBudget)}</span>
+        </div>
+      </div>`;
+      lastGroup=grp;
+    }
     const sp=tots[c.id]||0,bu=c.budget||0,pct=bu>0?Math.min(100,(sp/bu)*100):0;
     const col=pct>100?"var(--red)":pct>80?"var(--amb)":"var(--grn)";
     const tc=pct>100?"tr":pct>80?"ta":"tg";
-    return`<div class="prog"><div class="prh"><span class="prn">${c.emoji} ${c.name}</span><div style="display:flex;align-items:center;gap:.6rem"><span class="pra">${fmt(sp)} / ${fmt(bu)}</span><span class="tag ${tc}">${Math.round(pct)}%</span></div></div><div class="prt"><div class="prf" style="width:${pct}%;background:${col}"></div></div></div>`;
-  }).join("")||'<div class="empty">Configurez vos catégories dans "Nous"</div>';
+    // Find who pays this category from recurring
+    const catRec=S.rec.filter(r=>r.type==="expense"&&r.catId===c.id);
+    const catDots=[...new Set(catRec.map(r=>r.split?"split":r.who||"common"))].map(w=>w==="split"?wDotSplit(catRec.find(r=>r.split)?.split||{p1:.5,p2:.5}):wDot(w)).join("");
+    // Gradient color per group
+    const GRP_COLORS = {
+      "Logement":     {ok:"#4F46E5",warn:"#7C3AED",over:"#DC2626"},
+      "Transport":    {ok:"#0891B2",warn:"#0D9488",over:"#DC2626"},
+      "Famille":      {ok:"#DB2777",warn:"#D97706",over:"#DC2626"},
+      "Alimentation": {ok:"#059669",warn:"#D97706",over:"#DC2626"},
+      "Abonnements":  {ok:"#7C3AED",warn:"#D97706",over:"#DC2626"},
+      "Épargne":      {ok:"#2563EB",warn:"#D97706",over:"#DC2626"},
+      "Divers":       {ok:"#6B7280",warn:"#D97706",over:"#DC2626"},
+    };
+    const grpCol = GRP_COLORS[c.group||"Divers"] || GRP_COLORS["Divers"];
+    const barCol = pct>100 ? grpCol.over : pct>80 ? grpCol.warn : grpCol.ok;
+    // Gradient fill: solid color left, lighter right
+    const barGrad = pct>100
+      ? `linear-gradient(90deg,${grpCol.over},#FCA5A5)`
+      : pct>80
+      ? `linear-gradient(90deg,${grpCol.warn},#FDE68A)`
+      : `linear-gradient(90deg,${barCol},${barCol}88)`;
+    html+=`<div class="prog"><div class="prh"><span class="prn" style="display:flex;align-items:center;gap:.35rem">${c.emoji} ${c.name} <span style="display:inline-flex;gap:.18rem">${catDots}</span></span><div style="display:flex;align-items:center;gap:.55rem"><span class="pra">${fmt(sp)} / ${fmt(bu)}</span><span class="tag ${tc}">${Math.round(pct)}%</span></div></div><div class="prt"><div class="prf" style="width:${pct}%;background:${barGrad}"></div></div></div>`;
+  });
+  el.innerHTML=html||'<div class="empty">Configurez vos catégories dans "Nous"</div>';
 }
 
 function renderDonut(id){
@@ -1129,7 +1280,7 @@ function renderCmpChart(){
   const cur={},prev={};
   mTx().filter(x=>x.amount<0).forEach(x=>{cur[x.cat]=(cur[x.cat]||0)+Math.abs(x.amount);});
   prevTx().filter(x=>x.amount<0).forEach(x=>{prev[x.cat]=(prev[x.cat]||0)+Math.abs(x.amount);});
-  S.charts.cmp=new Chart(ctx,{type:"bar",data:{labels:S.cats.map(c=>c.emoji+" "+c.name.slice(0,8)),datasets:[{label:"Préc.",data:S.cats.map(c=>prev[c.id]||0),backgroundColor:"rgba(107,114,128,.15)",borderColor:"rgba(107,114,128,.35)",borderWidth:1,borderRadius:3},{label:"Ce mois",data:S.cats.map(c=>cur[c.id]||0),backgroundColor:"rgba(79,70,229,.15)",borderColor:"var(--ind)",borderWidth:1.5,borderRadius:3}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{labels:{color:"#6B7280",font:{size:10,weight:"600",family:"Inter"},boxWidth:10}}},scales:{x:{ticks:{color:"#9CA3AF",font:{size:9,family:"Inter"}},grid:{color:"#F1F3FA"}},y:{ticks:{color:"#9CA3AF",callback:v=>v+"€",font:{family:"JetBrains Mono",size:9}},grid:{color:"#F1F3FA"}}}}});
+  S.charts.cmp=new Chart(ctx,{type:"bar",data:{labels:sortedCats(S.cats).map(c=>c.emoji+" "+c.name.slice(0,8)),datasets:[{label:"Préc.",data:sortedCats(S.cats).map(c=>prev[c.id]||0),backgroundColor:"rgba(107,114,128,.15)",borderColor:"rgba(107,114,128,.35)",borderWidth:1,borderRadius:3},{label:"Ce mois",data:sortedCats(S.cats).map(c=>cur[c.id]||0),backgroundColor:"rgba(79,70,229,.15)",borderColor:"var(--ind)",borderWidth:1.5,borderRadius:3}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{labels:{color:"#6B7280",font:{size:10,weight:"600",family:"Inter"},boxWidth:10}}},scales:{x:{ticks:{color:"#9CA3AF",font:{size:9,family:"Inter"}},grid:{color:"#F1F3FA"}},y:{ticks:{color:"#9CA3AF",callback:v=>v+"€",font:{family:"JetBrains Mono",size:9}},grid:{color:"#F1F3FA"}}}}});
 }
 
 function buildFC(){
@@ -1151,10 +1302,10 @@ function renderForecast(){
   const rows=buildFC();
   tbody.innerHTML=rows.map((r,i)=>`<tr class="${i===0?"fc-now":""}">
     <td class="mono">${r.label}${i===0?' <span class="tag ti" style="font-size:.58rem;padding:.1rem .4rem">●</span>':""}</td>
-    <td class="mono gv">+${fmt(r.pI)}</td>
-    <td class="mono rv">-${fmt(r.pE)}</td>
-    <td class="mono ${r.bal>=0?"gv":"rv"}">${fmt(r.bal,true)}</td>
-    <td class="mono ${r.cum>=0?"gv":"rv"}">${fmt(r.cum,true)}</td>
+    <td class="mono gv" style="font-size:.88rem;font-weight:700">+${fmt(r.pI)}</td>
+    <td class="mono rv" style="font-size:.88rem;font-weight:700">-${fmt(r.pE)}</td>
+    <td class="mono ${r.bal>=0?"gv":"rv"}" style="font-size:.9rem;font-weight:800">${fmt(r.bal,true)}</td>
+    <td class="mono ${r.cum>=0?"gv":"rv"}" style="font-size:.9rem;font-weight:800">${fmt(r.cum,true)}</td>
   </tr>`).join("");
   S.charts.fc=new Chart(ctx,{type:"line",data:{labels:rows.map(r=>r.label),datasets:[
     {label:"Solde mensuel",data:rows.map(r=>r.bal),borderColor:"var(--blu)",backgroundColor:"rgba(37,99,235,.06)",tension:.4,fill:true,pointBackgroundColor:"var(--blu)",pointRadius:3,borderWidth:2},
@@ -1192,13 +1343,13 @@ function renderRemb(){
   const{p1,p2,net,n1,n2}=calcRemb();
   let c1,c2;
   if(Math.abs(net)<0.01){
-    c1=`<div class="remb-hero"><div style="font-size:2rem">✅</div><div class="remb-v" style="color:var(--grn)">Soldé</div><div class="remb-l">Comptes équilibrés</div></div>`;
+    c1=`<div class="remb-hero"><div style="display:flex;align-items:center;justify-content:center;gap:.5rem;margin-bottom:.4rem">${wDot("p1")}${wDot("p2")}</div><div style="font-size:1.8rem">✅</div><div class="remb-v" style="color:var(--grn)">Soldé</div><div class="remb-l">Comptes équilibrés</div></div>`;
     c2=`<div class="remb-hero"><div style="font-size:1.5rem">🤝</div><div class="remb-v">—</div><div class="remb-l">Rien à rembourser</div></div>`;
   } else if(net>0){
-    c1=`<div class="remb-hero owes"><div class="remb-l">${n1} doit à ${n2}</div><div class="remb-v" style="color:var(--red)">${fmt(net)}</div><button class="btn btn-grn btn-full btn-sm" style="margin-top:.75rem" onclick="settle('p1_to_p2',${net})">✓ Solder</button></div>`;
+    c1=`<div class="remb-hero owes"><div style="display:flex;align-items:center;justify-content:center;gap:.4rem;margin-bottom:.25rem">${wDot("p1")}<span class="remb-l">${n1} doit à ${n2}</span>${wDot("p2")}</div><div style="height:.1rem"><div class="remb-v" style="color:var(--red)">${fmt(net)}</div><button class="btn btn-grn btn-full btn-sm" style="margin-top:.75rem" onclick="settle('p1_to_p2',${net})">✓ Solder</button></div>`;
     c2=`<div class="remb-hero"><div class="remb-l">${n2} a avancé</div><div class="remb-v">${fmt(p2)}</div></div>`;
   } else {
-    c1=`<div class="remb-hero owes"><div class="remb-l">${n2} doit à ${n1}</div><div class="remb-v" style="color:var(--red)">${fmt(Math.abs(net))}</div><button class="btn btn-grn btn-full btn-sm" style="margin-top:.75rem" onclick="settle('p2_to_p1',${Math.abs(net)})">✓ Solder</button></div>`;
+    c1=`<div class="remb-hero owes"><div style="display:flex;align-items:center;justify-content:center;gap:.4rem;margin-bottom:.25rem">${wDot("p2")}<span class="remb-l">${n2} doit à ${n1}</span>${wDot("p1")}</div><div style="height:.1rem"><div class="remb-v" style="color:var(--red)">${fmt(Math.abs(net))}</div><button class="btn btn-grn btn-full btn-sm" style="margin-top:.75rem" onclick="settle('p2_to_p1',${Math.abs(net)})">✓ Solder</button></div>`;
     c2=`<div class="remb-hero"><div class="remb-l">${n1} a avancé</div><div class="remb-v">${fmt(p1)}</div></div>`;
   }
   ce.innerHTML=c1+c2;
@@ -1206,8 +1357,8 @@ function renderRemb(){
     const rt=S.tx.filter(t=>t.remb&&t.remb!=="none").sort((a,b)=>b.date.localeCompare(a.date));
     de.innerHTML=rt.length?rt.map(t=>{
       const c=getCat(t.cat);
-      const rl=t.remb==="split"?"50/50":t.remb==="p1_owes"?n1+" doit":n2+" doit";
-      return`<div class="row"><div class="ric ri-a">${c.emoji}</div><div class="rbody"><div class="rn">${t.desc}</div><div class="rm">${t.date} · <span class="tag tv">🔄 ${rl}</span></div></div><div class="ramt" style="color:var(--red)">${fmt(Math.abs(t.amount))}</div></div>`;
+      const rl=t.remb==="split"?wDotSplit({p1:.5,p2:.5}):t.remb==="p1_owes"?wDot("p1"):wDot("p2");
+      return`<div class="row"><div class="ric ri-a">${c.emoji}</div><div class="rbody"><div class="rn">${t.desc}</div><div class="rm">${t.date} · ${rl}</div></div><div class="ramt" style="color:var(--red)">${fmt(Math.abs(t.amount))}</div></div>`;
     }).join(""):
     '<div class="empty">Aucune dépense remboursable — sélectionnez "Remboursement" lors de la saisie</div>';
   }
@@ -1252,10 +1403,66 @@ function renderRecurring(){
   const ie=q("rec-inc"),ee=q("rec-exp");if(!ie||!ee)return;
   const inc=S.rec.filter(r=>r.type==="income"),exp=S.rec.filter(r=>r.type==="expense");
   const ti=q("tot-inc"),te=q("tot-exp");
-  if(ti)ti.textContent=inc.length?"+"+fmt(inc.reduce((a,b)=>a+b.amount,0)):"";
-  if(te)te.textContent=exp.length?"-"+fmt(exp.reduce((a,b)=>a+b.amount,0)):"";
-  ie.innerHTML=inc.map(r=>`<div class="row" style="margin-bottom:.3rem"><div class="ric ri-g">💶</div><div class="rbody"><div class="rn" style="font-size:.82rem">${r.desc}</div><div class="rm">${wLbl(r.who||"common")}</div></div><div class="ramt gv">+${fmt(r.amount)}</div><button class="rdel" onclick="fsDel(cRec,'${r.id}')">✕</button></div>`).join("")||'<div class="empty" style="padding:.75rem">Aucun revenu fixe</div>';
-  ee.innerHTML=exp.map(r=>{const c=getCat(r.catId);return`<div class="row" style="margin-bottom:.3rem"><div class="ric ri-r">${c.emoji}</div><div class="rbody"><div class="rn" style="font-size:.82rem">${r.desc}</div><div class="rm">${c.name} · ${wLbl(r.who||"common")}</div></div><div class="ramt rv">-${fmt(r.amount)}</div><button class="rdel" onclick="fsDel(cRec,'${r.id}')">✕</button></div>`}).join("")||'<div class="empty" style="padding:.75rem">Aucune charge fixe</div>';
+  const p1Inc=inc.filter(r=>r.who==="p1").reduce((a,b)=>a+b.amount,0);
+  const p2Inc=inc.filter(r=>r.who==="p2").reduce((a,b)=>a+b.amount,0);
+  const n1=S.cfg.name1,n2=S.cfg.name2;
+  if(ti)ti.textContent=inc.length?`+${fmt(p1Inc)} ${n1} · +${fmt(p2Inc)} ${n2}`:"";
+  // Expenses per person (with split)
+  let p1Exp=0,p2Exp=0;
+  exp.forEach(r=>{
+    if(r.split){p1Exp+=r.amount*r.split.p1;p2Exp+=r.amount*r.split.p2;}
+    else if(r.who==="p1")p1Exp+=r.amount;
+    else if(r.who==="p2")p2Exp+=r.amount;
+    else{p1Exp+=r.amount/2;p2Exp+=r.amount/2;}
+  });
+  if(te)te.textContent=exp.length?`${n1} ${fmt(p1Exp)} · ${n2} ${fmt(p2Exp)}`:"";
+
+  ie.innerHTML=inc.map(r=>{
+return`<div class="row" style="margin-bottom:.3rem">
+      <div class="ric ri-g">💶</div>
+      <div class="rbody">
+        <div class="rn" style="font-size:.85rem;display:flex;align-items:center;gap:.4rem">${r.desc} ${wDot(r.who||"common")}</div>
+      </div>
+      <div class="ramt gv">+${fmt(r.amount)}</div>
+      <button class="rdel" onclick="fsDel(cRec,'${r.id}')">✕</button>
+    </div>`;
+  }).join("")||'<div class="empty" style="padding:.75rem">Aucun revenu fixe</div>';
+
+  // Group expenses by category group
+  const grpIcons={"Logement":"🏠","Transport":"🚗","Famille":"👨‍👩‍👧","Alimentation":"🍽️","Abonnements":"📺","Épargne":"💰","Divers":"📦"};
+  const sorted=exp.slice().sort((a,b)=>{
+    const ca=getCat(a.catId), cb=getCat(b.catId);
+    const ga=GROUP_ORDER.indexOf(ca.group||"Divers"), gb=GROUP_ORDER.indexOf(cb.group||"Divers");
+    return ga!==gb?ga-gb:(ca.name||"").localeCompare(cb.name||"");
+  });
+  let eeHtml="", lastG="";
+  sorted.forEach(r=>{
+    const c=getCat(r.catId);
+    const grp=c.group||"Divers";
+    if(grp!==lastG){
+      // Group header with total
+      const grpTotal=sorted.filter(x=>getCat(x.catId).group===grp).reduce((a,x)=>a+x.amount,0);
+      eeHtml+=`<div style="display:flex;align-items:center;justify-content:space-between;padding:${lastG?".85rem":"0"} 0 .35rem">
+        <span style="font-family:var(--f-head);font-size:.72rem;font-weight:700;color:var(--tx3);text-transform:uppercase;letter-spacing:.06em">${grpIcons[grp]||"📦"} ${grp}</span>
+        <span style="font-family:var(--f-mono);font-size:.7rem;color:var(--tx3)">-${fmt(grpTotal)}/mois</span>
+      </div>`;
+      lastG=grp;
+    }
+
+
+    eeHtml+=`<div class="row" style="margin-bottom:.3rem">
+      <div class="ric ri-r">${c.emoji}</div>
+      <div class="rbody">
+        <div class="rn" style="font-size:.85rem;display:flex;align-items:center;gap:.4rem">${r.desc} ${r.split ? wDotSplit(r.split) : wDot(r.who||"common")}</div>
+        <div class="rm" style="display:flex;align-items:center;gap:.3rem;flex-wrap:wrap">
+          <span style="color:var(--tx4)">${c.name}</span>
+        </div>
+      </div>
+      <div class="ramt rv">-${fmt(r.amount)}/m</div>
+      <button class="rdel" onclick="fsDel(cRec,'${r.id}')">✕</button>
+    </div>`;
+  });
+  ee.innerHTML=eeHtml||'<div class="empty" style="padding:.75rem">Aucune charge fixe</div>';
 }
 
 function addRec(type){
@@ -1266,7 +1473,18 @@ function addRec(type){
 
 function renderCatList(){
   const el=q("cat-list");if(!el)return;
-  el.innerHTML=S.cats.map(c=>`<div class="row" style="margin-bottom:.3rem"><div class="ric ri-n">${c.emoji}</div><div class="rbody"><div class="rn" style="font-size:.82rem">${c.name}</div></div><input type="number" value="${c.budget||0}" step="10" min="0" style="background:var(--s1);border:1.5px solid var(--brd);border-radius:7px;padding:.28rem .55rem;color:var(--tx);font-family:var(--f-mono);font-size:.74rem;width:72px;text-align:right" onchange="fsUpd(cCats,'${c.id}',{budget:parseFloat(this.value)||0})"><span style="color:var(--tx4);font-size:.68rem;font-family:var(--f-body)">€/mois</span><button class="rdel" onclick="fsDel(cCats,'${c.id}')">✕</button></div>`).join("");
+  const cats=sortedCats(S.cats);
+  const grpIcons={"Logement":"🏠","Transport":"🚗","Famille":"👨‍👩‍👧","Alimentation":"🍽️","Abonnements":"📺","Épargne":"💰","Divers":"📦"};
+  let html="",lastGroup="";
+  cats.forEach(c=>{
+    const grp=c.group||"Divers";
+    if(grp!==lastGroup){
+      html+=`<div style="font-family:var(--f-head);font-size:.72rem;font-weight:700;color:var(--tx3);text-transform:uppercase;letter-spacing:.07em;padding:${lastGroup?".85rem":"0"} 0 .35rem">${grpIcons[grp]||"📦"} ${grp}</div>`;
+      lastGroup=grp;
+    }
+    html+=`<div class="row" style="margin-bottom:.3rem"><div class="ric ri-n">${c.emoji}</div><div class="rbody"><div class="rn" style="font-size:.82rem">${c.name}</div></div><input type="number" value="${c.budget||0}" step="10" min="0" style="background:var(--s1);border:1.5px solid var(--brd);border-radius:7px;padding:.28rem .55rem;color:var(--tx);font-family:var(--f-mono);font-size:.74rem;width:72px;text-align:right" onchange="fsUpd(cCats,'${c.id}',{budget:parseFloat(this.value)||0})"><span style="color:var(--tx4);font-size:.68rem;font-family:var(--f-body)">€/mois</span><button class="rdel" onclick="fsDel(cCats,'${c.id}')">✕</button></div>`;
+  });
+  el.innerHTML=html;
 }
 
 function renderCatSel(){
